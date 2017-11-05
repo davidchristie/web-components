@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <title>User Media Video</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="import" href="components/user-media-camera-select">
+    <link rel="import" href="components/user-media-video-stream">
+    <style>
+      user-media-video-stream {
+        border: 1px solid black;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>User Media Video</h1>
+    <div>
+      <user-media-camera-select name="camera-select"></user-media-camera-select>
+    </div>
+    <div>
+      <user-media-video-stream></user-media-video-stream>
+    </div>
+    <script type="module">
+      const cameraSelect = document.querySelector('user-media-camera-select')
+      const videoStream = document.querySelector('user-media-video-stream')
+      cameraSelect.addEventListener('change', event => {
+        videoStream.camera = event.target.value
+      })
+    </script>
+    <footer><a href="/">Home</a></footer>
+  </body>
+</html>
