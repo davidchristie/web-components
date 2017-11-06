@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <link href="components/network-status" rel="import">
+    <style>
+      network-status[status="online"] {
+        display: none;
+      }
+
+      .warning {
+        background: red;
+        color: white;
+        font-size: 1.4em;
+      }
+    </style>
+  </head>
+  <body>
+    <network-status>
+      <div class="warning">
+        Network Offline
+      </div>
+    </network-status>
+  </body>
+</html>
